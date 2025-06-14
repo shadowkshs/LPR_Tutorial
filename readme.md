@@ -111,3 +111,20 @@ python 08_Full_Recognition_flow.py
 - 圖像超解析與資料擴增
 - 光學辨識（TrOCR）與字體適應微調
 - 全流程整合與實測輸出
+
+
+## 📦 訓練完成權重下載
+可直接下載已訓練完成的模型權重，以便快速進行測試與應用。
+
+- **YOLOv11n 偵測模型（best.pt）**  
+  [🔗 點此下載](https://drive.google.com/file/d/1IzQthsyyVgS9NWDG2KDjh7BtZAHOCt_a/view?usp=sharing)
+
+- **TrOCR 車牌辨識模型（完整checkpoint資料夾）**  
+  [🔗 點此下載](https://drive.google.com/drive/folders/1kvW5MZ1miKpj9MpWi3Qa5f2WLveOTGYk?usp=sharing)
+
+> 請將下載後的檔案依照對應流程放入適當資料夾，以確保系統正常運作。
+
+## 🚀 Colab Tutorial
+可以使用下方連結開啟 Google Colab 實作範例：
+
+[▶️ 開啟 Colab 實作](https://colab.research.google.com/drive/1n00A6KlVeAbVNt9Psyn9yHIZpABy4fy1#scrollTo=heqQcU1uYIu9)
