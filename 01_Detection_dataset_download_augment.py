@@ -293,3 +293,19 @@ for split in splits:
 
     print(f"✅ Split '{split}' summary: Valid={valid_count}, Skipped={skip_count}")
 
+# === 產生 YOLO data.yaml ===
+data_yaml_path = os.path.join(base_dir, "data.yaml")
+
+data_yaml = f"""path: {os.path.abspath(base_dir)}
+train: images/train
+val: images/validation
+test: images/test
+
+names:
+  0: license_plate
+"""
+
+with open(data_yaml_path, "w", encoding="utf-8") as f:
+    f.write(data_yaml)
+
+print(f"data.yaml created at: {data_yaml_path}")
