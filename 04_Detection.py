@@ -11,8 +11,8 @@ from pathlib import Path
 
 
 # === 設定區 ===
-model_path = "runs/detect/lpr_yolo11n/weights/best.pt"
-image_dir = "./LPR_recognition/test"
+model_path = "runs/detect/runs/LPR_detection_yolo26n/weights/best.pt"
+image_dir = "./LPR_recognition/train"
 output_crop_dir = "./cropped_plates"
 conf_threshold = 0.8
 os.makedirs(output_crop_dir, exist_ok=True)
