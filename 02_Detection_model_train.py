@@ -1,20 +1,23 @@
+from multiprocessing import freeze_support
 from ultralytics import YOLO
 
-model = YOLO('yolo11n.pt')
 
-# 訓練模型
-model.train(
-    data='./LPR_detection/data.yaml',
-    epochs=50,
-    imgsz=640,
-    batch=16,
-    name='lpr_yolo11n',
-    augment=False,
-    save_period=5,
-    workers=4  # 可視環境調整
-)
+def main():
+    model = YOLO("yolo26n.pt")
 
-metrics = model.val()
-print(metrics)
+    model.train(
+        data="./LPR_detection/data.yaml",
+        epochs=100,
+        imgsz=640,
+        batch=16,
+        workers=4,        
+        device=0,
+        project="./runs",
+        name="LPR_detection_yolo26n",
+        exist_ok=True
+    )
 
 
+if __name__ == "__main__":
+    freeze_support()
+    main()
